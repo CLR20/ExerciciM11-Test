@@ -3,10 +3,7 @@ package com.florist.project;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
 
-import javax.swing.AbstractButton;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -18,12 +15,10 @@ import com.florist.application.*;
 
 public class ITFlowers extends Frame{	
 	
-	static MainFrame frame;
-	static Scanner sc;		
+	static MainFrame frame;	
 	public static CreateFlorist ITFlowers = new CreateFlorist();
 		
 	public static void main (String [] args ) {
-
 		ITFlowers itFlowers = new ITFlowers();
 		frame = itFlowers.new MainFrame();	
 		frame.setVisible(true);
@@ -40,8 +35,7 @@ public class ITFlowers extends Frame{
 		}
 	}
 
-	class Panel extends JPanel {
-		
+	class Panel extends JPanel {		
 		JPanel adminButtons;
 		JPanel stockAddButtons;
 		JPanel stockExtractButtons;
@@ -105,8 +99,7 @@ public class ITFlowers extends Frame{
 		}
 		
 		// Setting actions for the buttons.
-		private class PutAction implements ActionListener {
-			
+		private class PutAction implements ActionListener {			
 			JLabel propertyLabel;
 			JTextField nameText;
 			JTextField propertyText;
@@ -119,8 +112,7 @@ public class ITFlowers extends Frame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String buttonTitle = e.getActionCommand();
-								
+				String buttonTitle = e.getActionCommand();								
 				if (buttonTitle.equals("See inventory")) {
 					screen.setText(ITFlowers.inventory());										
 				} else if (buttonTitle.equals("Add tree")) {					

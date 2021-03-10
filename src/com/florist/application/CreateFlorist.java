@@ -59,16 +59,14 @@ public class CreateFlorist {
 	// Getting total stock values of all products.
 	public double getTreesValue() {
 		return trees.stream().collect(summingDouble(t -> t.getTreeValue()));
-	}
-	
+	}	
 	public double getFlowersValue() {
 		return flowers.stream().collect(summingDouble(t -> t.getFlowerValue()));
-	}
-	
+	}	
 	public double getDecorationsValue() {
 		return decorations.stream().collect(summingDouble(t -> t.getDecorationValue()));
-	}			
-
+	}	
+	
 	public String inventory() {
 		return "\nOUR PRODUCTS:" + "\n\nTREES: " + trees + "\n\nFLOWERS: " + flowers 
 				+ "\n\nDECORATIONS: " + decorations;
@@ -91,8 +89,7 @@ public class CreateFlorist {
 				}
 			}
 		}
-	}
-	
+	}	
 	public void extractFlower (String name, int quantity, String sold) {
 		for(Flowers f: flowers) {
 			if (name.equals(f.getProductName())) {
@@ -102,8 +99,7 @@ public class CreateFlorist {
 				}
 			}
 		}
-	}
-	
+	}	
 	public void extractDecoration (String name, int quantity, String sold) {
 		for(Decorations d: decorations) {
 			if (name.equals(d.getProductName())) {
